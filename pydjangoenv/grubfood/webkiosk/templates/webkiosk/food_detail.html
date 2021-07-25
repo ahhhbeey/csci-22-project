@@ -1,0 +1,13 @@
+{% extends 'webkiosk/base.html' %}
+
+{% block pagetitle %}Grubfood - {{food.name }}{% endblock %}
+
+{% block maincontent %}
+<h2>{{ food.name }}</h2>
+<ul>
+    <li>Description: {{ food.description }}</li>
+    <li>Description: {{ food.price }}</li>
+</ul>
+{% endblock %}
+
+localhost:8000/webkiosk/food/1

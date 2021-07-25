@@ -1,0 +1,31 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block pagetitle %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'webkiosk/styles/main.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1>GrubFood</h1>
+            <p>Grub your food now!</p>
+            <img src="{% static 'webkiosk/images/cat.png' %}">
+        </header>
+
+        {% block mainnav %}
+        <nav>
+            <ul>
+                <li><a href="{% url 'webkiosk:food-list' %}">Food Menu</a></li>
+                <li><a href="{% url 'webkiosk:food-create' %}">Add Food</a></li>
+            </ul>
+        </nav>
+        {% endblock %}
+
+        <main>
+            {% block maincontent %}
+
+            {% endblock %}
+        </main>
+    </body>
+</html>
